@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ index }}:{{ value }}</h1>
+    <h1>{{ index }}:{{ value.name }}</h1>
   </div>
 </template>
 
