@@ -1,17 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <slots-examples>
+      <template v-slot:title>
+        <h1>{{ heading }}</h1>
+      </template>
+      <p>{{ paragraph }}</p>
+    </slots-examples>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import slotsExamples from "./components/SlotsExamples.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    "slots-examples": slotsExamples,
+  },
+  data() {
+    return {
+      heading: "Hello Welcome to Slots",
+      paragraph: "mutiple slots",
+    };
+  },
+};
 </script>
 
 <style>
